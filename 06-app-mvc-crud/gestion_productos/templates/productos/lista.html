@@ -1,0 +1,10 @@
+<h1>Lista de Productos</h1>
+<a href="/crear/">Agregar Producto</a>
+<ul>
+{% for producto in productos %}
+    <li>{{ producto.nombre }} - ${{ producto.precio }} - Cantidad: {{ producto.cantidad }}
+        <a href="/editar/{{ producto.id }}/">Editar</a>
+        <a href="/eliminar/{{ producto.id }}/">Eliminar</a>
+    </li>
+{% endfor %}
+</ul>
